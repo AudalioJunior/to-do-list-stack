@@ -1,0 +1,29 @@
+.body{
+    width: 100%;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    min-height:10rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 0.7rem;
+    margin: 1rem 0px;
+}
+.container{
+    width: 100%;
+}
+.title{
+    font-size: 2rem;
+    margin: 0.2rem;
+}
+.content{
+    font-size: 1rem;
+    margin: 0.5rem 0.7rem;
+}
+
+.check{
+    min-width: 3rem;
+    margin: auto;
+    input{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

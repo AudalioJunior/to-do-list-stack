@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body{
+    background-color: #f3f3f3;
+}
+//    font-family: 'Lobster', cursive;
+//font-family: 'Montserrat', sans-serif;
+
+.flex {
+    display: flex;
+  
+    &.displayColumn {
+      flex-direction: column;
+    }
+  
+    &.displayRow {
+      flex-direction: row;
+    }
+  
+    &.spaceBetween {
+      justify-content: space-between;
+    }
+  
+    &.spaceAround {
+      justify-content: space-around;
+    }
+  
+    &.justifyCenter {
+      justify-content: center;
+    }
+  
+    &.col {
+      flex-direction: column;
+    }
+  
+    *.wrap{
+      flex-wrap: wrap;
+    }
+  }
+  
+
+  // Media Queries
+$min-sm: 320px;
+$max-sm: 480px; // Mobile devices
+$min-md: 481px;
+$max-md: 768px; // iPads, Tablets
+$min-xmd: 769px;
+$max-xmd: 1024px; // Small screens, laptops
+$min-lg: 1025px;
+$max-lg: 1200px; // Desktops, large screens
+$max-xlg: 1201px; // Extra large screens, TV
+$min-ltl: 1440px;
+$max-ltl: 1441px;
+$max-xxxlg: 1825px;

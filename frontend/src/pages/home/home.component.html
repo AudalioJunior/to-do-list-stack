@@ -1,0 +1,9 @@
+<div class="container flex displayColumn">
+    <h1 class="title">
+        TO DOS:
+    </h1>
+    <div *ngFor="let item of items" class="cardArea flex displayColumn">
+        <app-card title={{item.title}} content={{item.content}} checked={{item.checked}}></app-card>
+    </div>
+</div>
+ 
