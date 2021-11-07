@@ -7,9 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() title = '';
-  @Input() content = '';
-  @Input() checked:any;
+  @Input() 
+  title: string = '';
+
+  @Input() 
+  content: string = '';
+
+  @Input() 
+  checked: any;
+
+  @Input()
+  isEdit: boolean = Boolean();
 
   constructor() { }
 

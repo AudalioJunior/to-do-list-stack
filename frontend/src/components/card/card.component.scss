@@ -27,3 +27,35 @@
         width: 1.5rem;
     }
 }
+
+.trash{
+    margin-bottom: 5rem;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.zoneInput{
+    input{
+        border-radius: 5px;
+        border-style: ridge;
+        background-color: #ebebeb;
+    }
+    textarea{
+        border-radius: 5px;
+        border-style: ridge;
+        background-color: #ebebeb;
+    }
+    .add{
+        margin-left: auto;
+        font-size: 50px;
+        color: green;
+        cursor: pointer;
+    }
+    .deleteAll{
+        margin-left: 15px;
+        font-size: 50px;
+        color: orangered;
+        cursor: pointer;
+    }
+}

@@ -1,13 +1,42 @@
 <div class="body flex">
     <div class="container flex displayColumn">
-        <div>
-            <p class="title"> {{title}} </p>
+        <div *ngIf="!isEdit">
+            <div>
+                <div>
+                    <p class="title"> {{title}} </p>
+                </div>
+            </div>
             <p class="content">{{content}}</p>
+        </div>
+        <div *ngIf="isEdit" >
+            <div class="zoneInput flex">
+                <div>
+                    <div>
+                        <label>Título: </label>
+                    </div>
+                    <input type="text">
+                </div>
+                <div class="add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <div class="deleteAll">
+                    <i class="fas fa-dumpster-fire"></i>
+                </div>
+            </div>
+            <div class="zoneInput">
+                <div>
+                    <label>Descrição: </label>
+                </div>
+                <div>
+                    <textarea name="" id="" cols="60" rows="9"></textarea>
+                </div>
+            </div>
         </div> 
     </div>
-    <div class="check">
+    <div *ngIf="!isEdit" class="check">
+        <div class="trash">
+            <i class="fas fa-trash"></i>
+        </div>
         <input type="checkbox" id="check" name="check" [checked]=false>  
-        <!-- tu bota true ali e fica marcado -->
     </div>
-   
 </div>
