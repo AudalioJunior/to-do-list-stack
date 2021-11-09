@@ -9,17 +9,18 @@
             <p class="content">{{content}}</p>
         </div>
         <div *ngIf="isEdit" >
+            <form [formGroup]="formGroup">
             <div class="zoneInput flex">
                 <div>
                     <div>
                         <label>Título: </label>
                     </div>
-                    <input type="text">
+                    <input type="text" formControlName="title">
                 </div>
-                <div class="add">
+                <div class="add" (click)="clickAdd()">
                     <i class="fas fa-plus-circle"></i>
                 </div>
-                <div class="deleteAll">
+                <div class="deleteAll" (click)='clickDeleteAll()'>
                     <i class="fas fa-dumpster-fire"></i>
                 </div>
             </div>
@@ -28,15 +29,16 @@
                     <label>Descrição: </label>
                 </div>
                 <div>
-                    <textarea name="" id="" cols="60" rows="9"></textarea>
+                    <textarea name="" id="" cols="60" rows="9" formControlName="content"></textarea>
                 </div>
             </div>
+        </form>
         </div> 
     </div>
     <div *ngIf="!isEdit" class="check">
-        <div class="trash">
+        <div class="trash" (click)="clickDelete()">
             <i class="fas fa-trash"></i>
         </div>
-        <input type="checkbox" id="check" name="check" [checked]=false>  
+        <input (click)="changeChecked()" type="checkbox" id="check" name="check" [checked]="checked">  
     </div>
 </div>

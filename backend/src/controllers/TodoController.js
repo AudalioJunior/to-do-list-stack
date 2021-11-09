@@ -44,7 +44,7 @@ router.delete('/deleteTask/:id', async (req, res) => {
 router.delete('/deleteTaskAll', async (req, res) => {
     try {
         await Todo.remove();
-        return res.status(400).json({mensagem: "Todos os dados foram deletados com sucesso!"});
+        return res.json({mensagem: "Todos os dados foram deletados com sucesso!"});
     } catch (error) {
         return res.status(400).json({erro: "Error ao deletar todos os dados!"})
     }

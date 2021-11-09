@@ -2,8 +2,11 @@
     <h1 class="title">
         TO DOS:
     </h1>
+    <div class="cardArea flex displayColumn">
+        <app-card (clickAddEmitter)="addTask($event)" (deleteEmitter)="deleteAll()" [isEdit]="true"></app-card>
+    </div>
     <div *ngFor="let item of items" class="cardArea flex displayColumn">
-        <app-card title={{item.title}} content={{item.content}} checked={{item.checked}}></app-card>
+        <app-card (clickDeleteEmitter)="deleteTask($event)" (changeCheckEmitter)="markTask($event)" [checked]="item.select" title={{item.title}} content={{item.content}} id={{item._id}} checked={{item.checked}}></app-card>
     </div>
 </div>
  
